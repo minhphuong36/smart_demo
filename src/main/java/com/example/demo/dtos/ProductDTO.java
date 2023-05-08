@@ -1,20 +1,13 @@
-package com.example.demo.entities;
+package com.example.demo.dtos;
 
 import lombok.Data;
 
-import javax.persistence.*;
-
-@Entity
 @Data
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class ProductDTO {
     private int id;
     private String name;
     private String img;
     private String price;
     private int quantity;
     private int status;
-
-
 }

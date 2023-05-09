@@ -20,7 +20,6 @@ public class Orders {
 
     private int status;
 
-    @ManyToOne
-    private Inventory inventory;
+
 
 }

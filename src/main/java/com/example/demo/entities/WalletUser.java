@@ -3,15 +3,17 @@ package com.example.demo.entities;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Data
-public class Inventory {
+public class WalletUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String name;
-    private int quantity;
-    private int status;
-
+    private double balance;
+    private Date createAt;
+    private Date updateAt;
+    @OneToOne
+    private User user;
 }

@@ -16,4 +16,7 @@ public class OrderDetail {
     @ManyToOne
     private Orders orders;
     private int status;
+
+
+
 }

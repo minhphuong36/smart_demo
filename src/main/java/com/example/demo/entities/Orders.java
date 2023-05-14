@@ -1,5 +1,6 @@
 package com.example.demo.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -14,6 +15,7 @@ public class Orders {
     private int id;
     private Date orderDate;
     private Double totalPrice;
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "user_Id")
     private User user;
